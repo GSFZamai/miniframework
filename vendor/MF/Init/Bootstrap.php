@@ -28,9 +28,6 @@ abstract class Bootstrap {
                 $controller = new $class;
                 $action = $route['action'];
                 $controller->$action();
-            }else {
-                echo "Rota não encontrada";
-                return;
             }
         }
     }
