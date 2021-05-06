@@ -2,15 +2,20 @@
 
     namespace App\Controllers;
 
-    class IndexController {
+    use MF\Controller\Action;
+
+    class IndexController extends Action{
 
         public function index() {
-            echo 'Chegamos até o IndexController e acessamos a rota index';
+            $this->view->dados = array('Caldo Verde', 'Caldo Detox', 'Caldo Laranja');
+            $this->render('index', 'layout1');
         }
 
         public function sobreNos() {
-            echo 'Chegamos até o IndexController e acessamos a rota sobreNos';
+            $this->view->dados = array('Batata', 'Cenoura', 'Cebola');
+            $this->render('sobreNos', 'layout2');
         }
+
     }
 
 ?>
