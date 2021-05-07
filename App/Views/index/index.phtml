@@ -2,7 +2,8 @@
 <hr />
 
 <?php 
-    foreach($this->view->dados as $index => $value) {
-        echo $value.'<br>';
+
+    foreach($this->view->dados as $index => $produto) {
+        echo $produto['id'].' - '.$produto['descricao'].' - R$'.$produto['preco'].'<br>';
     }
 ?>
